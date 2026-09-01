@@ -35,16 +35,29 @@ public class TablaHash {
 
         for (int i = 0; i < m; i++) {
 
-            System.out.print(i + " -> ");
+            System.out.print(i);
 
             Nodo actual = tabla[i];
 
             while (actual != null) {
-                System.out.print("(" + actual.key + ", " + actual.value + ") -> ");
+                System.out.print(" -> (" + actual.key + ", " + actual.value + ")");
                 actual = actual.siguiente;
             }
 
-            System.out.println("[]");
+            System.out.println("");
+        }
+    }
+
+    public void buscar(int key) {
+
+        int posicion = funcionHash(key);
+
+        Nodo actual = tabla[posicion];
+
+        while (actual != null){
+            if(actual.key == key){
+                System.out.print("buscar(" + key + ") --> " + actual.value);
+            }
         }
     }
 

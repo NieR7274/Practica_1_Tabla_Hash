@@ -5,20 +5,13 @@ public class Main {
          TablaHash tabla = new TablaHash();
 
 
-        System.out.println("= Prueba de tablas ahash = ");
+        System.out.println("= Prueba de tablas hash = \n");
 
-        for (int i = 0; i < 7; i ++){
-
-            int valor;
-
-            System.out.println("Ingrse un valor para la clve " + (i + 1) + ":");
-
-            valor = Integer.parseInt(System.console().readLine());
-
-            tabla.insertar(i, String.valueOf(valor));
-
-
-        }
+        tabla.insertar(18,"Ana");
+        tabla.insertar(10, "Luis");
+        tabla.insertar(23, "Elena");
+        tabla.insertar(24, "Maria");
+        tabla.insertar(31, "Carlos");
 
         tabla.mostrar();
 
