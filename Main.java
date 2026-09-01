@@ -7,6 +7,7 @@ public class Main {
 
         System.out.println("= Prueba de tablas hash = \n");
 
+        System.out.println("=Insertar=\n");
         tabla.insertar(18,"Ana");
         tabla.insertar(10, "Luis");
         tabla.insertar(23, "Elena");
@@ -15,7 +16,11 @@ public class Main {
 
         tabla.mostrar();
 
-
+        System.out.println("\n=Buscar=\n");
+        tabla.buscar(24);
+        tabla.buscar(18);
+        tabla.buscar(31);
+        tabla.buscar(999);
 
     }
     

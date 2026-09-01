@@ -56,9 +56,13 @@ public class TablaHash {
 
         while (actual != null){
             if(actual.key == key){
-                System.out.print("buscar(" + key + ") --> " + actual.value);
+                System.out.print("buscar("+ key +") --> '" + actual.value + "'\n");
+                return;
             }
+            actual = actual.siguiente;
         }
+        System.out.print("buscar("+ key +") --> NOT_FOUND \n");
+        
     }
 
     private class Nodo {
