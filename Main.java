@@ -13,6 +13,7 @@ public class Main {
         tabla.insertar(23, "Elena");
         tabla.insertar(24, "Maria");
         tabla.insertar(31, "Carlos");
+        tabla.insertar(24, "Ana Maria");
 
         tabla.mostrar();
 
@@ -21,6 +22,14 @@ public class Main {
         tabla.buscar(18);
         tabla.buscar(31);
         tabla.buscar(999);
+
+        System.out.println("\n=Eliminar=\n");
+        tabla.eliminar(24);
+        tabla.eliminar(999);
+        tabla.eliminar(24);
+        
+        System.out.println();
+        tabla.mostrar();
 
     }
     
