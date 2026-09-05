@@ -35,16 +35,20 @@ public class TablaHash {
 
         for (int i = 0; i < m; i++) {
 
-            System.out.print(i);
+            System.out.print(i + " ->");
 
             Nodo actual = tabla[i];
 
             while (actual != null) {
-                System.out.print(" -> (" + actual.key + ", " + actual.value + ")");
+                System.out.print(" (" + actual.key + ", " + actual.value + ")");
+
+                if (actual.siguiente != null) {
+                    System.out.print(" ->");
+                }
                 actual = actual.siguiente;
             }
 
-            System.out.println("");
+            System.out.println();
         }
     }
 
@@ -63,6 +67,31 @@ public class TablaHash {
         }
         System.out.print("buscar("+ key +") --> NOT_FOUND \n");
         
+    }
+
+    public void eliminar(int key){
+        int posicion = funcionHash(key);
+
+        Nodo actual = tabla[posicion];
+        Nodo anterior = null;
+
+        while (actual != null){
+            if(actual.key == key){
+                if (anterior == null){
+                    tabla[posicion] = actual.siguiente;
+                }
+
+                else{
+                    anterior.siguiente = actual.siguiente;
+                }
+
+                System.out.println("Eliminar(" + key + ")");
+                return;
+            }
+            anterior = actual;
+            actual = actual.siguiente;
+        }
+        System.out.print("Eliminar("+ key +") --> NOT_FOUND \n");        
     }
 
     private class Nodo {

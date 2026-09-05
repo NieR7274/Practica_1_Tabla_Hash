@@ -22,6 +22,14 @@ public class Main {
         tabla.buscar(31);
         tabla.buscar(999);
 
+        System.out.println("\n=Eliminar=\n");
+        tabla.eliminar(24);
+        tabla.eliminar(999);
+        tabla.eliminar(24);
+        
+        System.out.println();
+        tabla.mostrar();
+
     }
     
 }
