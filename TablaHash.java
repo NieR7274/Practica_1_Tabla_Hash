@@ -18,10 +18,21 @@ public class TablaHash {
 
         Nodo nuevo = new Nodo(key, value);
 
+        Nodo actual = tabla[posicion];
+
+        while (actual != null){
+            if(actual.key == key){
+                actual.value = value;
+                return;
+            }
+            actual = actual.siguiente;
+        }
+
         if (tabla[posicion] == null) {
             tabla[posicion] = nuevo;
         } else {
-            Nodo actual = tabla[posicion];
+
+            actual = tabla[posicion];
 
             while (actual.siguiente != null) {
                 actual = actual.siguiente;

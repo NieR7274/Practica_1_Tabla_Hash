@@ -13,6 +13,7 @@ public class Main {
         tabla.insertar(23, "Elena");
         tabla.insertar(24, "Maria");
         tabla.insertar(31, "Carlos");
+        tabla.insertar(24, "Ana Maria");
 
         tabla.mostrar();
 
