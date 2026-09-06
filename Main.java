@@ -17,7 +17,7 @@ public class Main {
         tabla.insertar(18,"Ana");
         tabla.insertar(10, "Luis");
         tabla.insertar(23, "Elena");
-
+        System.out.println("");
         tabla.mostrar();
 
         System.out.println("\n=Buscar=\n");
@@ -25,12 +25,14 @@ public class Main {
         tabla.buscar(10);
         tabla.buscar(23);
 
-        System.out.println("\n= Prueba 3: Colisiones =");
+        System.out.println("\n= Prueba 3: Colisiones =\n");
         tabla.insertar(24,"Maria");
         tabla.insertar(31, "Carlos");  
+        System.out.println("");
         
         tabla.mostrar();
 
+        System.out.println("");
         tabla.buscar(10);
         tabla.buscar(24);
         tabla.buscar(31);
@@ -54,6 +56,7 @@ public class Main {
         System.out.println("\n= Prueba 6: Actualización de una llave existente\n");
         tabla.insertar(18,"Ana");
         tabla.insertar(18,"Ana Maria");
+        System.out.println();
 
         tabla.mostrar();
         System.out.println();

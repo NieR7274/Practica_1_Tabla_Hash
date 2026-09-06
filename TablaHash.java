@@ -23,6 +23,7 @@ public class TablaHash {
         while (actual != null){
             if(actual.key == key){
                 actual.value = value;
+                System.out.print("Actualizado: (" + actual.key + ", " + actual.value + ")\n");
                 return;
             }
             actual = actual.siguiente;
@@ -30,6 +31,7 @@ public class TablaHash {
 
         if (tabla[posicion] == null) {
             tabla[posicion] = nuevo;
+            System.out.print("Insertado: (" + nuevo.key + ", " + nuevo.value + ")\n");
         } else {
 
             actual = tabla[posicion];
@@ -39,6 +41,7 @@ public class TablaHash {
             }
 
             actual.siguiente = nuevo;
+            System.out.print("Insertado: (" + nuevo.key + ", " + nuevo.value + ")\n");
         }
     }
 
@@ -96,7 +99,7 @@ public class TablaHash {
                     anterior.siguiente = actual.siguiente;
                 }
 
-                System.out.println("Eliminar(" + key + ")");
+                System.out.println("Eliminado: (" + key + ")");
                 return;
             }
             anterior = actual;
