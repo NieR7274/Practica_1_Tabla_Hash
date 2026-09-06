@@ -5,7 +5,7 @@ Practica sobre tablas hash.
 * Equipo:
 
   * Ángel Aaron López Cruz
-  * Gabriel Lugo Roceto
+  * Gabriel Lugo Rosete
 
 1. lenguaje utilizado: Java.
 
