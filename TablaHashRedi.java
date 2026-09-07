@@ -98,6 +98,30 @@ public class TablaHashRedi {
         System.out.println("eliminar(" + key + ") --> NOT_FOUND");
     }
 
+
+    public void factorCarga(){
+
+        int elementos = longitud();
+        double factorCarga = (double) elementos / m;
+        System.out.println("Factor de carga: " + String.format("%.2f",factorCarga ) );
+
+    }
+
+    public int longitud(){
+
+        int count = 0;
+
+        for (int i = 0; i < m; i++) {
+
+            if (tabla[i] != null && !tabla[i].deleted) {
+                count++;
+            }
+
+        }
+        return count;
+
+    }
+
     private class Nodo {
 
         int key;

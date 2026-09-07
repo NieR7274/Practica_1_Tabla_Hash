@@ -63,18 +63,10 @@ public class Main {
         tabla.buscar(10);
         tabla.buscar(23);
 
-<<<<<<< HEAD
         System.out.println("\n= Prueba 3: Colisiones =");
         tabla.insertar(24, "Maria");
         tabla.insertar(31, "Carlos");
 
-=======
-        System.out.println("\n= Prueba 3: Colisiones =\n");
-        tabla.insertar(24,"Maria");
-        tabla.insertar(31, "Carlos");  
-        System.out.println("");
-        
->>>>>>> a96e074fddaf6245bd81b82796b185f6497efe5f
         tabla.mostrar();
 
         System.out.println("");
@@ -99,16 +91,9 @@ public class Main {
         System.out.println();
         tabla.mostrar();
 
-<<<<<<< HEAD
         System.out.println("\n= Prueba 6: Actualizacion de una llave existente =\n");
         tabla.insertar(18, "Ana");
         tabla.insertar(18, "Ana Maria");
-=======
-        System.out.println("\n= Prueba 6: Actualización de una llave existente\n");
-        tabla.insertar(18,"Ana");
-        tabla.insertar(18,"Ana Maria");
-        System.out.println();
->>>>>>> a96e074fddaf6245bd81b82796b185f6497efe5f
 
         tabla.mostrar();
 
@@ -144,6 +129,12 @@ public class Main {
         System.out.println();
         tabla.buscar(24);
         tabla.buscar(31);
+
+        System.out.println("\n= Factor de carga =\n");
+
+        //agrrgar factor de carga
+        // tabla.factorCarga();
+
     }
 
     public static void probarTablaDos() {
@@ -235,5 +226,10 @@ public class Main {
         System.out.println();
         tabla.buscar(24);
         tabla.buscar(31);
+
+        System.out.println("\n= Factor de carga =\n");
+
+        tabla.factorCarga();
+
     }
 }
