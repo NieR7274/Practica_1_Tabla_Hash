@@ -4,17 +4,19 @@ public class TablaHash {
 
     private Nodo[] tabla;
 
+    private int longitud = 0;
+
     public TablaHash() {
         tabla = new Nodo[m];
     }
 
-    private int funcionHash(int key) {
+    private int Hash(int key) {
         return key % 7;
     }
 
     public void insertar(int key, String value) {
 
-        int posicion = funcionHash(key);
+        int posicion = Hash(key);
 
         Nodo nuevo = new Nodo(key, value);
 
@@ -23,6 +25,7 @@ public class TablaHash {
         while (actual != null){
             if(actual.key == key){
                 actual.value = value;
+                System.out.print("Actualizado: (" + actual.key + ", " + actual.value + ")\n");
                 return;
             }
             actual = actual.siguiente;
@@ -30,6 +33,8 @@ public class TablaHash {
 
         if (tabla[posicion] == null) {
             tabla[posicion] = nuevo;
+            longitud++;
+            System.out.print("Insertado: (" + nuevo.key + ", " + nuevo.value + ")\n");
         } else {
 
             actual = tabla[posicion];
@@ -39,10 +44,12 @@ public class TablaHash {
             }
 
             actual.siguiente = nuevo;
+            longitud++;
+            System.out.print("Insertado: (" + nuevo.key + ", " + nuevo.value + ")\n");
         }
     }
 
-    public void mostrar() {
+    public void imprimirTabla() {
 
         for (int i = 0; i < m; i++) {
 
@@ -65,7 +72,7 @@ public class TablaHash {
 
     public void buscar(int key) {
 
-        int posicion = funcionHash(key);
+        int posicion = Hash(key);
 
         Nodo actual = tabla[posicion];
 
@@ -81,7 +88,7 @@ public class TablaHash {
     }
 
     public void eliminar(int key){
-        int posicion = funcionHash(key);
+        int posicion = Hash(key);
 
         Nodo actual = tabla[posicion];
         Nodo anterior = null;
@@ -96,13 +103,22 @@ public class TablaHash {
                     anterior.siguiente = actual.siguiente;
                 }
 
-                System.out.println("Eliminar(" + key + ")");
+                longitud-- ;
+                System.out.println("Eliminado: (" + key + ")");
                 return;
             }
             anterior = actual;
             actual = actual.siguiente;
         }
         System.out.print("Eliminar("+ key +") --> NOT_FOUND \n");        
+    }
+
+    public void factorCarga(){
+
+        int elementos = longitud;
+        double factorCarga = (double) elementos / m;
+        System.out.println("Factor de carga: " + String.format("%.2f",factorCarga ) );
+
     }
 
     private class Nodo {

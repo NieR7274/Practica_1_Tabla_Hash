@@ -47,7 +47,7 @@ public class Main {
 
         System.out.println("\n= Prueba 1: Tabla vacia =");
         System.out.println();
-        tabla.mostrar();
+        tabla.imprimirTabla();
         System.out.println();
         tabla.buscar(10);
 
@@ -56,7 +56,7 @@ public class Main {
         tabla.insertar(10, "Luis");
         tabla.insertar(23, "Elena");
         System.out.println("");
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println("\n= Buscar =\n");
         tabla.buscar(18);
@@ -67,7 +67,7 @@ public class Main {
         tabla.insertar(24, "Maria");
         tabla.insertar(31, "Carlos");
 
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println("");
         tabla.buscar(10);
@@ -78,7 +78,7 @@ public class Main {
         tabla.eliminar(24);
 
         System.out.println();
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println();
         tabla.buscar(24);
@@ -89,13 +89,13 @@ public class Main {
         tabla.eliminar(999);
 
         System.out.println();
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println("\n= Prueba 6: Actualizacion de una llave existente =\n");
         tabla.insertar(18, "Ana");
         tabla.insertar(18, "Ana Maria");
 
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println();
         tabla.buscar(18);
@@ -114,7 +114,7 @@ public class Main {
         tabla.insertar(24, "Maria");
         tabla.insertar(31, "Carlos");
 
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println();
         tabla.buscar(24);
@@ -124,7 +124,7 @@ public class Main {
         tabla.eliminar(24);
 
         System.out.println();
-        tabla.mostrar();
+        tabla.imprimirTabla();
 
         System.out.println();
         tabla.buscar(24);
@@ -132,8 +132,7 @@ public class Main {
 
         System.out.println("\n= Factor de carga =\n");
 
-        //agrrgar factor de carga
-        // tabla.factorCarga();
+        tabla.factorCarga();
 
     }
 
