@@ -36,7 +36,7 @@ public class TablaHashRedi {
         System.out.println("Ya no se pueden insertar mas elementos en la tabla.");
     }
 
-    public void mostrar() {
+    public void imprimirTabla() {
 
         for (int i = 0; i < m; i++) {
 
