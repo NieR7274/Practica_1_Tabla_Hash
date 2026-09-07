@@ -8,7 +8,7 @@ public class TablaHashRedi {
         tabla = new Nodo[m];
     }
 
-    private int funcionHash(int key) {
+    private int hash(int key) {
         return key % 7;
     }
 
@@ -25,7 +25,7 @@ public class TablaHashRedi {
 
         for (int i = 0; i < m; i++) {
 
-            posicion = (funcionHash(key) + i) % m;
+            posicion = (hash(key) + i) % m;
 
             if (tabla[posicion] == null || tabla[posicion].deleted) {
                 tabla[posicion] = nuevo;
@@ -52,7 +52,7 @@ public class TablaHashRedi {
 
         for (int i = 0; i < m; i++) {
 
-            int posicion = (funcionHash(key) + i) % m;
+            int posicion = (hash(key) + i) % m;
 
             if (tabla[posicion] == null) {
                 return -1;
@@ -81,7 +81,7 @@ public class TablaHashRedi {
 
         for (int i = 0; i < m; i++) {
 
-            int posicion = (funcionHash(key) + i) % m;
+            int posicion = (hash(key) + i) % m;
 
             if (tabla[posicion] == null) {
                 System.out.println("eliminar(" + key + ") --> NOT_FOUND");
