@@ -14,6 +14,12 @@ public class Main {
             System.out.println("3. Salir");
             System.out.print("Seleccione una opcion: ");
 
+
+            while (!scanner.hasNextInt()) {
+                System.out.println("Opcion no valida. Por favor, ingrese un numero.");
+                scanner.next(); 
+            }
+
             opcion = scanner.nextInt();
 
             switch (opcion) {
